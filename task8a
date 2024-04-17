@@ -1,0 +1,25 @@
+import java.util.Arrays;
+
+public class task8a {
+    public static int[] sliceArray(int[] arr, int start, int end) {
+        if (start < 0 || start >= arr.length) {
+            throw new IllegalArgumentException("Start index is out of bounds");
+        }
+        if (end < start || end >= arr.length) {
+            throw new IllegalArgumentException("End index is out of bounds or less than start index");
+        }
+        int length = end - start + 1;
+        int[] slicedArray = new int[length];
+        for (int i = 0; i < length; i++) {
+            slicedArray[i] = arr[start + i];
+        }
+        return slicedArray;
+    }
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int start = 2;
+        int end = 8;
+        int[] slicedArray = sliceArray(arr, start, end);
+        System.out.println("Sliced array: " + Arrays.toString(slicedArray));
+    }
+}
