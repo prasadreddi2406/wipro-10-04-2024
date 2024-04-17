@@ -1,5 +1,5 @@
 public class task7b {
-    public static int linearSearch(int[] arr, int target) {
+    public static int performLnearSearch(int[] arr, int target) {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == target) {
                 return i;
@@ -10,7 +10,7 @@ public class task7b {
     public static void main(String[] args) {
         int[] arr = {5, 3, 8, 2, 9, 4, 1};
         int s = 4;
-        int index = linearSearch(arr, s);
+        int index = performLinearSearch(arr, s);
         if (index != -1) {
             System.out.println("Number " + s + " found at index " + index);
         } else {
